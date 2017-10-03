@@ -1,0 +1,21 @@
+{
+    "kind": "Service",
+    "metadata": {
+        "labels": {
+            "external": "true",
+            "${NS_HASH}": "${MYSQL_DEPLOY_NAME}-${MYSQL_DEPLOY_HASH}"
+        },
+        "name": "${MYSQL_SVC_NAME}-${MYSQL_SVC_HASH}"
+    },
+    "spec": {
+        "selector": {
+            "${NS_HASH}": "${MYSQL_DEPLOY_NAME}-${MYSQL_DEPLOY_HASH}"
+        },
+        "ports": [
+            {
+                "protocol": "TCP",
+                "targetPort": ${MYSQL_PORT}
+            }
+        ]
+    }
+}

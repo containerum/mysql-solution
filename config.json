@@ -1,0 +1,26 @@
+{
+  "env": {
+    "MYSQL_IMAGE": "mysql",
+    "MYSQL_PORT": "3306",
+    "MYSQL_DEPLOY_NAME": "solution-mysql",
+    "MYSQL_SVC_NAME": "solution-mysql-svc",
+    "MYSQL_USER": "redmine",
+    "MYSQLPATH": "/var/lib/mysql"
+  },
+  "compile":{
+     "MYSQL_DEPLOY_HASH": "$RANDOM_5$",
+     "MYSQL_SVC_HASH": "$RANDOM_5$",
+     "MYSQL_ROOT_PASSWORD": "$RANDOM_8$",
+     "MYSQL_PASSWORD": "$RANDOM_8$"
+  },
+  "run":[
+    {
+      "type": "deployment",
+      "config_file": "deploy-mysql.json"
+    },
+    {
+      "type": "service",
+      "config_file": "service-mysql.json"
+    }
+  ]
+}
