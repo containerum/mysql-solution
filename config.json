@@ -4,7 +4,7 @@
     "MYSQL_PORT": "3306",
     "MYSQL_DEPLOY_NAME": "solution-mysql",
     "MYSQL_SVC_NAME": "solution-mysql-svc",
-    "MYSQL_USER": "redmine",
+    "MYSQL_USER": "mysql",
     "MYSQLPATH": "/var/lib/mysql"
   },
   "compile":{
