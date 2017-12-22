@@ -7,7 +7,9 @@
     "DATA": "/var/lib/mysql",
     "HASH": "{{rand_string 5}}",
     "ROOT_PASS": "{{rand_string 8}}",
-    "PASS": "{{rand_string 8}}"
+    "PASS": "{{rand_string 8}}",
+    "CPU": "500m",
+    "RAM": "500Mi"
   },
   "run":[
     {
