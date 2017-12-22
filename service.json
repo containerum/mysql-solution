@@ -3,7 +3,7 @@
     "metadata": {
         "labels": {
             "external": "true",
-            "{{.NS_SELECTOR}}": "{{.NAME}}-{{.HASH}}"
+            "{{.NS_SELECTOR}}": "{{.NAME}}"
         },
         "name": "{{.NAME}}"
     },
