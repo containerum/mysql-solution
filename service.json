@@ -5,7 +5,7 @@
             "external": "true",
             "{{.NS_SELECTOR}}": "{{.NAME}}-{{.HASH}}"
         },
-        "name": "{{.NAME}}-{{.HASH}}"
+        "name": "{{.NAME}}"
     },
     "spec": {
         "selector": {
