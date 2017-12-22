@@ -17,20 +17,28 @@
           {
             "env": [
               {
-                "name": "MYSQL_USER",
+                "name": "MARIADB_USERNAME",
                 "value": "{{.USER}}"
               },
               {
-                "name": "MYSQL_ROOT_PASSWORD",
+                "name": "MARIADB_INNODB_LARGE_PREFIX",
+                "value": "{{.MARIADB_INNODB_LARGE_PREFIX}}"
+              },
+              {
+                "name": "MARIADB_INNODB_FILE_FORMAT",
+                "value": "{{.MARIADB_INNODB_FILE_FORMAT}}"
+              },
+              {
+                "name": "MARIADB_MAX_ALLOWED_PACKET",
+                "value": "{{.MARIADB_MAX_ALLOWED_PACKET}}"
+              },
+              {
+                "name": "MARIADB_ROOT_PASSWORD",
                 "value": "{{.ROOT_PASS}}"
               },
               {
-                "name": "MYSQL_PASSWORD",
+                "name": "MARIADB_PASSWORD",
                 "value": "{{.PASS}}"
-              },
-              {
-                "name": "MYSQLDATA",
-                "value": "{{.DATA}}"
               }
            ],
             "image": "{{.IMAGE}}",
