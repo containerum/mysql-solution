@@ -8,7 +8,8 @@
     "template": {
       "metadata": {
         "labels": {
-          "app": "{{.NAME}}-{{.HASH}}"
+          "app": "{{.NAME}}-{{.HASH}}",
+            "{{.NS_SELECTOR}}": "{{.NAME}}"
         },
         "name": "{{.NAME}}"
       },

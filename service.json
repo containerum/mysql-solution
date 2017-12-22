@@ -9,7 +9,7 @@
     },
     "spec": {
         "selector": {
-            "{{.NS_SELECTOR}}": "{{.NAME}}"
+            "{{.NS_SELECTOR}}": "{{.NAME}}-{{.HASH}}"
         },
         "ports": [
             {
