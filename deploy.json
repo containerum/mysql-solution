@@ -10,7 +10,7 @@
         "labels": {
           "app": "{{.NAME}}-{{.HASH}}"
         },
-        "name": "{{.NAME}}"
+        "name": "{{.NAME}}-{{.HASH}}"
       },
       "spec": {
         "containers": [
