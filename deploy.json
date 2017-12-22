@@ -1,0 +1,61 @@
+{
+  "kind": "Deployment",
+  "metadata": {
+    "name": "{{.NAME}}-{{.HASH}}"
+  },
+  "spec": {
+    "replicas": 1,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "{{.NAME}}-{{.HASH}}"
+        },
+        "name": "{{.NAME}}-{{.HASH}}"
+      },
+      "spec": {
+        "containers": [
+          {
+            "env": [
+              {
+                "name": "MYSQL_USER",
+                "value": "{{.USER}}"
+              },
+              {
+                "name": "MYSQL_ROOT_PASSWORD",
+                "value": "{{.ROOT_PASS}}"
+              },
+              {
+                "name": "MYSQL_PASSWORD",
+                "value": "{{.PASS}}"
+              },
+              {
+                "name": "MYSQLDATA",
+                "value": "{{.DATA}}"
+              }
+           ],
+            "image": "{{.IMAGE}}",
+            "name": "{{.NAME}}",
+            "resources": {
+              "requests": {
+                "cpu": "{{.CPU}}",
+                "memory": "{{.RAM}}"
+              }
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "{{.DATA}}",
+                "name": "{{.VOLUME}}",
+                "subPath": "{{.NAME}}-{{.HASH}}{{.DATA}}"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "{{.VOLUME}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "env": {
+    "IMAGE": "webhippie/mariadb:latest",
+    "PORT": "3306",
+    "NAME": "solution-mysql",
+    "USER": "mysql",
+    "DATA": "/var/lib/mysql",
+    "HASH": "{{rand_string 5}}",
+    "ROOT_PASS": "{{rand_string 8}}",
+    "PASS": "{{rand_string 8}}"
+  },
+  "run":[
+    {
+      "type": "deployment",
+      "config_file": "deploy.json"
+    },
+    {
+      "type": "service",
+      "config_file": "service.json"
+    }
+  ]
+}
