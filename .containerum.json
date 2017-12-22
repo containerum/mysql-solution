@@ -9,7 +9,7 @@
     "ROOT_PASS": "{{rand_string 8}}",
     "PASS": "{{rand_string 8}}",
     "CPU": "500m",
-    "RAM": "500Mi"
+    "RAM": "512Mi"
   },
   "run":[
     {
