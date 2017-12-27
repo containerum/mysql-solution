@@ -3,13 +3,13 @@
     "metadata": {
         "labels": {
             "external": "true",
-            "{{.NS_SELECTOR}}": "{{.NAME}}"
+            "{{.NS_SELECTOR}}": "{{.NAME}}-{{.HASH}}"
         },
-        "name": "{{.NAME}}"
+        "name": "{{.NAME}}-{{.HASH}}"
     },
     "spec": {
         "selector": {
-            "{{.NS_SELECTOR}}": "{{.NAME}}"
+            "{{.NS_SELECTOR}}": "{{.NAME}}-{{.HASH}}"
         },
         "ports": [
             {

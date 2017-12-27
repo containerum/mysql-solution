@@ -1,17 +1,16 @@
 {
   "kind": "Deployment",
   "metadata": {
-    "name": "{{.NAME}}"
+    "name": "{{.NAME}}-{{.HASH}}"
   },
   "spec": {
     "replicas": 1,
     "template": {
       "metadata": {
         "labels": {
-          "app": "{{.NAME}}-{{.HASH}}",
-            "{{.NS_SELECTOR}}": "{{.NAME}}"
+          "app": "{{.NAME}}-{{.HASH}}"
         },
-        "name": "{{.NAME}}"
+        "name": "{{.NAME}}-{{.HASH}}"
       },
       "spec": {
         "containers": [
